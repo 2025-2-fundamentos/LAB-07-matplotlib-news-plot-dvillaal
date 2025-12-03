@@ -94,6 +94,12 @@ def pregunta_01():
             color=colors[col]
         )
     
+    plt.xticks(
+        ticks=df.index,
+        labels=df.index,
+        ha='center'
+    )
+    
     if os.path.exists("files/plots"):
         for file in glob.glob("files/plots/*"):
             os.remove(file)
